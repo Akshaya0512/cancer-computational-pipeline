@@ -1,27 +1,21 @@
-# 🧬 Cancer Computational Analysis Pipeline
+# Cancer Computational Pipeline
 
-A fully modular Python pipeline for exploring open-access cancer genomics datasets (such as TCGA).  
-This project is designed for learning data science, machine learning, and computational biology techniques through real, publicly available cancer data.
+This repository contains a minimal Python-based pipeline for exploratory computational analysis related to cancer research.
 
----
+## Structure
 
-## 📌 Overview
+- `src/` — Core Python modules for data loading, preprocessing, analysis, and visualization.
+- `notebooks/` — Jupyter notebooks for exploratory data analysis.
+- `requirements.txt` — Python dependencies.
 
-This repository includes:
+## Goals
 
-- Automatic download of public gene-expression datasets
-- Data preprocessing and normalization
-- Visualization tools for gene expression
-- A machine learning classifier for tumor subtype prediction
-- A clean, modular code structure suitable for research environments
-- Jupyter notebooks for step-by-step exploration
+- Learn computational methods for analyzing cancer-related datasets.
+- Provide a foundation for future machine learning and AI projects in biomedical research.
+- Prepare for summer research opportunities and long-term MD/PhD goals.
 
-Although this project uses real cancer data, all datasets are:
-- **Public**
-- **De-identified**
-- **Safe for educational use**
+## Future Work
 
----
-
-## 🗂 Project Structure
-
+- Add real cancer datasets and preprocessing pipelines.
+- Implement analysis and visualization functions.
+- Extend to machine learning models for prediction or classification tasks.
