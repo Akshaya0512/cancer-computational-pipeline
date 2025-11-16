@@ -1,13 +1,15 @@
-# src/visualize.py
-import matplotlib.pyplot as plt
+# src/data_loader.py
+import pandas as pd
 
-def plot_column(df, column):
+def load_csv(file_path):
     """
-    Create a simple histogram of a column.
+    Load a CSV file into a pandas DataFrame.
+    Placeholder function for cancer datasets.
     """
-    if df is None or column not in df.columns:
-        print(f"Column {column} not found")
-        return
-    df[column].hist()
-    plt.title(f"Distribution of {column}")
-    plt.show()
+    try:
+        df = pd.read_csv(file_path)
+        print(f"Loaded {len(df)} rows from {file_path}")
+        return df
+    except FileNotFoundError:
+        print(f"File not found: {file_path}")
+        return None
