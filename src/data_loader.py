@@ -1,15 +1,24 @@
 # src/data_loader.py
+
 import pandas as pd
 
-def load_csv(file_path):
+def load_data(expr_file, label_file):
     """
-    Load a CSV file into a pandas DataFrame.
-    Placeholder function for cancer datasets.
+    Load gene expression data and labels.
+
+    Returns:
+        X (DataFrame): Features
+        y (Series): Labels
     """
     try:
-        df = pd.read_csv(file_path)
-        print(f"Loaded {len(df)} rows from {file_path}")
-        return df
-    except FileNotFoundError:
-        print(f"File not found: {file_path}")
-        return None
+        X = pd.read_csv(expr_file, index_col=0)
+        y = pd.read_csv(label_file)["subtype"]
+
+        print(f"[✓] Loaded expression data: {X.shape}")
+        print(f"[✓] Loaded labels: {y.shape}")
+
+        return X, y
+
+    except Exception as e:
+        print(f"[✗] Error loading data: {e}")
+        return None, None
