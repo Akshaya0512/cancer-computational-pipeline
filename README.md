@@ -1,32 +1,35 @@
-Cancer Computational Pipeline: Gene Expression Based Subtype Classification
+Cancer Gene Expression Classification Pipeline
 
  Overview
 
-This project is a modular machine learning pipeline designed to analyze cancer gene expression data and classify tumor subtypes using supervised learning algorithms.
+This project implements an end-to-end machine learning pipeline for cancer subtype classification using gene expression data.
 
-It simulates a simplified computational oncology workflow inspired by real-world cancer genomics pipelines (e.g., TCGA-based classification studies).
+It is designed to simulate a simplified computational oncology workflow inspired by real-world TCGA-based cancer genomics studies.
 
- Goal
+The pipeline is fully modular and includes data loading, preprocessing, model training, evaluation, and biological interpretation of feature importance.
+
+ Objective
 
 The goal of this project is to:
 
-- Analyze gene expression profiles of cancer samples
-- Build machine learning models to classify cancer subtypes
-- Compare model performance
-- Identify biologically important genes contributing to predictions
+- Classify cancer subtypes using gene expression profiles
+- Compare multiple machine learning models
+- Evaluate predictive performance using standard metrics
+- Identify biologically relevant genes contributing to classification
 
-Why This Matters
+Scientific Motivation
 
-Cancer is a highly heterogeneous disease, and gene expression patterns play a key role in distinguishing tumor subtypes.
+Cancer is a highly heterogeneous disease characterized by distinct molecular and genetic profiles.
 
-Computational methods like machine learning are widely used in modern cancer research to:
-- identify biomarkers
-- classify tumor types
-- support precision medicine research
+Gene expression analysis combined with machine learning is widely used in computational oncology to:
 
-Pipeline Overview
+- Identify biomarkers
+- Classify tumor subtypes
+- Support precision medicine research
 
-The project follows a standard ML pipeline:
+ Pipeline Architecture
+
+The workflow follows a standard ML research pipeline:
 Raw Gene Expression Data
 ↓
 Data Loading
@@ -39,21 +42,22 @@ Model Training
 ↓
 Evaluation
 ↓
-Feature Importance (Gene Ranking)
+Feature Importance Analysis
 
  Models Used
 
 - Random Forest Classifier
 - Logistic Regression
 
-These models were chosen for:
-- interpretability
-- strong performance on high-dimensional biological data
-- use as baseline ML models in bioinformatics research
+These models are widely used as baseline algorithms in bioinformatics due to:
+
+- Interpretability
+- Robust performance on high-dimensional data
+- Suitability for biological datasets
 
 Evaluation Metrics
 
-Model performance is measured using:
+Model performance is evaluated using:
 
 - Accuracy
 - Precision, Recall, F1-score
@@ -61,60 +65,57 @@ Model performance is measured using:
 
  Biological Interpretation
 
-Feature importance from the Random Forest model is used to identify genes that contribute most strongly to cancer subtype classification.
+Feature importance analysis (Random Forest) is used to identify genes most strongly associated with cancer subtype classification.
 
-These genes may represent:
-- potential biomarkers
-- biologically relevant signals in tumor classification
+These genes may represent potential biomarkers for further biological investigation.
 
  Project Structure
-cancer-computational-pipeline/
-│
-├── src/
-│ ├── data_loader.py
-│ ├── preprocessing.py
-│ ├── ml_models.py
-│ ├── analysis.py
-│
-├── data/
-│ ├── processed/
-│ ├── raw/
-│
-├── main.py
-└── README.md
+src/
+├── data_loader.py
+├── preprocessing.py
+├── ml_models.py
+├── analysis.py
+data/
+├── raw/
+├── processed/
+main.py
+README.md
 
- How the Pipeline Works
+ How to Run 
 
-1. Load gene expression and label data
-2. Clean and preprocess dataset
-3. Split into training and testing sets
-4. Train ML models
-5. Evaluate performance
-6. Extract most important genes
+Execute the full pipeline using:
+python main.py
 
- Future Improvements
+This will:
+1. Load dataset
+2. Preprocess data
+3. Train ML models
+4. Evaluate performance
+5. Output gene importance rankings
+
+Future Improvements
 
 - Integration with full TCGA dataset
-- ROC curve analysis
-- SHAP-based explainability
-- Deep learning models
-- Multi-omics integration (gene expression + mutation + methylation)
+- ROC-AUC curve analysis
+- SHAP-based model interpretability
+- Deep learning models (Neural Networks)
+- Multi-omics integration (mutation + expression + methylation)
 - Survival analysis (Kaplan-Meier curves)
 
- Educational Value
+
 
 This project demonstrates:
 
-- end-to-end ML pipeline design
-- application of machine learning in computational biology
-- preprocessing of high-dimensional biological data
-- basic model interpretability techniques
+- End-to-end machine learning pipeline design
+- Application of ML in computational biology
+- Handling of high-dimensional biological data
+- Model evaluation and interpretability techniques
 
-Disclaimer
+ Disclaimer
 
-This project is intended for educational and research exploration purposes only and is not a clinical diagnostic tool.
+This project is intended for educational and research purposes only and is not a clinical diagnostic tool.
 
- Author
+Author
 
-Built by Akshaya0512  
+Akshaya0512  
 Aspiring physician-scientist interested in computational cancer biology and machine learning applications in genomics.
