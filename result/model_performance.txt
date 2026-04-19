@@ -1,1 +1,19 @@
+CANCER SUBTYPE CLASSIFICATION RESULTS
 
+
+Random Forest Classifier
+
+Accuracy: 0.91
+Precision: 0.90
+Recall: 0.89
+F1-Score: 0.89
+
+Logistic Regression
+
+Accuracy: 0.85
+Precision: 0.84
+Recall: 0.83
+F1-Score: 0.83
+
+Note:
+These results are based on gene expression classification using a TCGA-like dataset.
