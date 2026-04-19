@@ -1,1 +1,12 @@
+CONFUSION MATRIX - RANDOM FOREST
 
+
+                Predicted
+              A   B   C
+Actual A     48   3   2
+Actual B      4  45   5
+Actual C      2   6  44
+
+Interpretation:
+- Class A has highest precision
+- Class C shows slight misclassification with B
