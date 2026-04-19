@@ -4,21 +4,17 @@ import pandas as pd
 
 def load_data(expr_file, label_file):
     """
-    Load gene expression data and labels.
+    Load gene expression matrix and labels.
 
     Returns:
-        X (DataFrame): Features
-        y (Series): Labels
+        X: features (gene expression)
+        y: labels (cancer subtype)
     """
-    try:
-        X = pd.read_csv(expr_file, index_col=0)
-        y = pd.read_csv(label_file)["subtype"]
 
-        print(f"[✓] Loaded expression data: {X.shape}")
-        print(f"[✓] Loaded labels: {y.shape}")
+    X = pd.read_csv(expr_file, index_col=0)
+    y = pd.read_csv(label_file)["subtype"]
 
-        return X, y
+    print(f"[DATA] X shape: {X.shape}")
+    print(f"[DATA] y shape: {y.shape}")
 
-    except Exception as e:
-        print(f"[✗] Error loading data: {e}")
-        return None, None
+    return X, y
