@@ -19,7 +19,7 @@ def main():
     X_train, X_test, y_train, y_test, scaler = preprocess_data(X, y)
 
     # Step 3: Train Models
-    results = train_models()
+    results = train_models(X_train, X_test, y_train, y_test)
 
     # Step 4: Evaluate Random Forest
     print("\n--- Random Forest Results ---")
