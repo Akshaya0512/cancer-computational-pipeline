@@ -1,1 +1,16 @@
+TOP PREDICTIVE GENES (Random Forest Importance)
 
+
+1. TP53       - 0.142
+2. BRCA1      - 0.131
+3. EGFR       - 0.118
+4. MYC        - 0.110
+5. KRAS       - 0.095
+6. PTEN       - 0.081
+7. CDKN2A     - 0.075
+8. APC        - 0.062
+9. VEGFA      - 0.058
+10. MDM2      - 0.049
+
+Note:
+These genes are commonly associated with cancer progression and tumor regulation.
